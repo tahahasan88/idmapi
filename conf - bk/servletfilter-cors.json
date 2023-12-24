@@ -1,0 +1,17 @@
+{
+    "classPathURLs" : [ ],
+    "filterClass" : "org.eclipse.jetty.servlets.CrossOriginFilter",
+    "initParams" : {
+        "allowCredentials" : false,
+        "allowedHeaders" : "authorization,accept,content-type,origin,x-requested-with,cache-control,accept-api-version,if-match",
+        "allowedMethods" : "GET,POST,PUT,DELETE,PATCH",
+        "allowedOrigins" : "*",
+        "chainPreflight" : false
+    },
+    "requestAttributes" : { },
+    "scriptExtensions" : { },
+    "systemProperties" : { },
+    "urlPatterns" : [
+        "/*"
+    ]
+}

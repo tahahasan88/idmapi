@@ -1,0 +1,855 @@
+{
+    "connectorRef" : {
+        "connectorHostRef" : "#LOCAL",
+        "bundleVersion" : "[1.5.0.0,1.6.0.0)",
+        "bundleName" : "org.forgerock.openicf.connectors.salesforce-connector",
+        "connectorName" : "org.forgerock.openicf.connectors.salesforce.SalesforceConnector"
+    },
+    "resultsHandlerConfig" : {
+        "enableNormalizingResultsHandler" : false,
+        "enableFilteredResultsHandler" : false,
+        "enableCaseInsensitiveFilter" : false,
+        "enableAttributesToGetSearchResultsHandler" : true
+    },
+    "operationTimeout" : {
+        "CREATE" : -1,
+        "UPDATE" : -1,
+        "DELETE" : -1,
+        "TEST" : -1,
+        "SCRIPT_ON_CONNECTOR" : -1,
+        "SCRIPT_ON_RESOURCE" : -1,
+        "GET" : -1,
+        "RESOLVEUSERNAME" : -1,
+        "AUTHENTICATE" : -1,
+        "SEARCH" : -1,
+        "VALIDATE" : -1,
+        "SYNC" : -1,
+        "SCHEMA" : -1
+    },
+    "configurationProperties" : {
+        "clientId" : null,
+        "clientSecret" : null,
+        "refreshToken" : null,
+        "loginUrl" : "https://test.salesforce.com/services/oauth2/token",
+        "instanceUrl" : null,
+        "version" : 44,
+        "connectTimeout" : 120000,
+        "proxyHost" : null,
+        "proxyPort" : 3128,
+        "maximumConnections" : 10,
+        "supportedObjectTypes" : [
+            "User"
+        ]
+    },
+    "enabled" : false,
+    "objectTypes" : {
+        "User" : {
+            "$schema" : "http://json-schema.org/draft-03/schema",
+            "id" : "User",
+            "type" : "object",
+            "nativeType" : "User",
+            "properties" : {
+                "__NAME__" : {
+                    "type" : "string",
+                    "nativeName" : "__NAME__",
+                    "nativeType" : "string"
+                },
+                "Id" : {
+                    "type" : "string",
+                    "nativeName" : "Id",
+                    "nativeType" : "string"
+                },
+                "Username" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "Username",
+                    "nativeType" : "string"
+                },
+                "FirstName" : {
+                    "type" : "string",
+                    "nativeName" : "FirstName",
+                    "nativeType" : "string"
+                },
+                "LastName" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "LastName",
+                    "nativeType" : "string"
+                },
+                "Name" : {
+                    "type" : "string",
+                    "nativeName" : "Name",
+                    "nativeType" : "string"
+                },
+                "CompanyName" : {
+                    "type" : "string",
+                    "nativeName" : "CompanyName",
+                    "nativeType" : "string"
+                },
+                "Division" : {
+                    "type" : "string",
+                    "nativeName" : "Division",
+                    "nativeType" : "string"
+                },
+                "Department" : {
+                    "type" : "string",
+                    "nativeName" : "Department",
+                    "nativeType" : "string"
+                },
+                "Title" : {
+                    "type" : "string",
+                    "nativeName" : "Title",
+                    "nativeType" : "string"
+                },
+                "Street" : {
+                    "type" : "string",
+                    "nativeName" : "Street",
+                    "nativeType" : "string"
+                },
+                "City" : {
+                    "type" : "string",
+                    "nativeName" : "City",
+                    "nativeType" : "string"
+                },
+                "State" : {
+                    "type" : "string",
+                    "nativeName" : "State",
+                    "nativeType" : "string"
+                },
+                "PostalCode" : {
+                    "type" : "string",
+                    "nativeName" : "PostalCode",
+                    "nativeType" : "string"
+                },
+                "Country" : {
+                    "type" : "string",
+                    "nativeName" : "Country",
+                    "nativeType" : "string"
+                },
+                "Phone" : {
+                    "type" : "string",
+                    "nativeName" : "Phone",
+                    "nativeType" : "string"
+                },
+                "Latitude" : {
+                    "type" : "string",
+                    "nativeName" : "Latitude",
+                    "nativeType" : "string"
+                },
+                "Longitude" : {
+                    "type" : "string",
+                    "nativeName" : "Longitude",
+                    "nativeType" : "string"
+                },
+                "Email" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "Email",
+                    "nativeType" : "string"
+                },
+                "Alias" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "Alias",
+                    "nativeType" : "string"
+                },
+                "LocaleSidKey" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "LocaleSidKey",
+                    "nativeType" : "string"
+                },
+                "EmailEncodingKey" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "EmailEncodingKey",
+                    "nativeType" : "string"
+                },
+                "LanguageLocaleKey" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "LanguageLocaleKey",
+                    "nativeType" : "string"
+                },
+                "TimeZoneSidKey" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "TimeZoneSidKey",
+                    "nativeType" : "string"
+                },
+                "CommunityNickname" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "CommunityNickname",
+                    "nativeType" : "string"
+                },
+                "ProfileId" : {
+                    "type" : "string",
+                    "required" : true,
+                    "nativeName" : "ProfileId",
+                    "nativeType" : "string"
+                },
+                "MobilePhone" : {
+                    "type" : "string",
+                    "nativeName" : "MobilePhone",
+                    "nativeType" : "string"
+                },
+                "LastReferencedDate" : {
+                    "type" : "string",
+                    "nativeName" : "LastReferencedDate",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesShowEmailToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowEmailToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesHideCSNGetChatterMobileTask" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideCSNGetChatterMobileTask",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesGlobalNavGridMenuWTShown" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesGlobalNavGridMenuWTShown",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesGlobalNavBarWTShown" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesGlobalNavBarWTShown",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowFaxToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowFaxToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesEventRemindersCheckboxDefault" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesEventRemindersCheckboxDefault",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableSharePostEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableSharePostEmail",
+                    "nativeType" : "boolean"
+                },
+                "CallCenterId" : {
+                    "type" : "string",
+                    "nativeName" : "CallCenterId",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesHasCelebrationBadge" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHasCelebrationBadge",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowFaxToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowFaxToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "EmailPreferencesAutoBcc" : {
+                    "type" : "boolean",
+                    "nativeName" : "EmailPreferencesAutoBcc",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowEmailToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowEmailToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "DigestFrequency" : {
+                    "type" : "string",
+                    "nativeName" : "DigestFrequency",
+                    "nativeType" : "string"
+                },
+                "UserPermissionsOfflineUser" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsOfflineUser",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisProfPostCommentEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisProfPostCommentEmail",
+                    "nativeType" : "boolean"
+                },
+                "FederationIdentifier" : {
+                    "type" : "string",
+                    "nativeName" : "FederationIdentifier",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesFavoritesWTShown" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesFavoritesWTShown",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesRecordHomeReservedWTShown" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesRecordHomeReservedWTShown",
+                    "nativeType" : "boolean"
+                },
+                "UserPermissionsMobileUser" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsMobileUser",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesSuppressTaskSFXReminders" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesSuppressTaskSFXReminders",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowCountryToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowCountryToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowWorkPhoneToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowWorkPhoneToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "BadgeText" : {
+                    "type" : "string",
+                    "nativeName" : "BadgeText",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesExcludeMailAppAttachments" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesExcludeMailAppAttachments",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesSortFeedByComment" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesSortFeedByComment",
+                    "nativeType" : "boolean"
+                },
+                "ReceivesAdminInfoEmails" : {
+                    "type" : "boolean",
+                    "nativeName" : "ReceivesAdminInfoEmails",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesFavoritesShowTopFavorites" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesFavoritesShowTopFavorites",
+                    "nativeType" : "boolean"
+                },
+                "SmallPhotoUrl" : {
+                    "type" : "string",
+                    "nativeName" : "SmallPhotoUrl",
+                    "nativeType" : "string"
+                },
+                "LastPasswordChangeDate" : {
+                    "type" : "string",
+                    "nativeName" : "LastPasswordChangeDate",
+                    "nativeType" : "string"
+                },
+                "SenderName" : {
+                    "type" : "string",
+                    "nativeName" : "SenderName",
+                    "nativeType" : "string"
+                },
+                "IsActive" : {
+                    "type" : "boolean",
+                    "nativeName" : "IsActive",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesRecordHomeSectionCollapseWTShown" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesRecordHomeSectionCollapseWTShown",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableLikeEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableLikeEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableChangeCommentEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableChangeCommentEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowStreetAddressToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowStreetAddressToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "SystemModstamp" : {
+                    "type" : "string",
+                    "nativeName" : "SystemModstamp",
+                    "nativeType" : "string"
+                },
+                "StayInTouchSubject" : {
+                    "type" : "string",
+                    "nativeName" : "StayInTouchSubject",
+                    "nativeType" : "string"
+                },
+                "OutOfOfficeMessage" : {
+                    "type" : "string",
+                    "nativeName" : "OutOfOfficeMessage",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesShowMobilePhoneToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowMobilePhoneToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesEnableAutoSubForFeeds" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesEnableAutoSubForFeeds",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableBookmarkEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableBookmarkEmail",
+                    "nativeType" : "boolean"
+                },
+                "IsExtIndicatorVisible" : {
+                    "type" : "boolean",
+                    "nativeName" : "IsExtIndicatorVisible",
+                    "nativeType" : "boolean"
+                },
+                "GeocodeAccuracy" : {
+                    "type" : "string",
+                    "nativeName" : "GeocodeAccuracy",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesHideCSNDesktopTask" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideCSNDesktopTask",
+                    "nativeType" : "boolean"
+                },
+                "MediumBannerPhotoUrl" : {
+                    "type" : "string",
+                    "nativeName" : "MediumBannerPhotoUrl",
+                    "nativeType" : "string"
+                },
+                "DefaultGroupNotificationFrequency" : {
+                    "type" : "string",
+                    "nativeName" : "DefaultGroupNotificationFrequency",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesHideS1BrowserUI" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideS1BrowserUI",
+                    "nativeType" : "boolean"
+                },
+                "IsProfilePhotoActive" : {
+                    "type" : "boolean",
+                    "nativeName" : "IsProfilePhotoActive",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesLightningExperiencePreferred" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesLightningExperiencePreferred",
+                    "nativeType" : "boolean"
+                },
+                "LastLoginDate" : {
+                    "type" : "string",
+                    "nativeName" : "LastLoginDate",
+                    "nativeType" : "string"
+                },
+                "EmailPreferencesStayInTouchReminder" : {
+                    "type" : "boolean",
+                    "nativeName" : "EmailPreferencesStayInTouchReminder",
+                    "nativeType" : "boolean"
+                },
+                "StayInTouchNote" : {
+                    "type" : "string",
+                    "nativeName" : "StayInTouchNote",
+                    "nativeType" : "string"
+                },
+                "LastModifiedDate" : {
+                    "type" : "string",
+                    "nativeName" : "LastModifiedDate",
+                    "nativeType" : "string"
+                },
+                "CreatedDate" : {
+                    "type" : "string",
+                    "nativeName" : "CreatedDate",
+                    "nativeType" : "string"
+                },
+                "AboutMe" : {
+                    "type" : "string",
+                    "nativeName" : "AboutMe",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesShowProfilePicToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowProfilePicToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowStateToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowStateToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowManagerToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowManagerToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesHideSfxWelcomeMat" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideSfxWelcomeMat",
+                    "nativeType" : "boolean"
+                },
+                "LastModifiedById" : {
+                    "type" : "string",
+                    "nativeName" : "LastModifiedById",
+                    "nativeType" : "string"
+                },
+                "UserType" : {
+                    "type" : "string",
+                    "nativeName" : "UserType",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesShowCityToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowCityToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "CreatedById" : {
+                    "type" : "string",
+                    "nativeName" : "CreatedById",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesShowTitleToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowTitleToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowWorkPhoneToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowWorkPhoneToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowStreetAddressToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowStreetAddressToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPermissionsSupportUser" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsSupportUser",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesPathAssistantCollapsed" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesPathAssistantCollapsed",
+                    "nativeType" : "boolean"
+                },
+                "MediumPhotoUrl" : {
+                    "type" : "string",
+                    "nativeName" : "MediumPhotoUrl",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesDisableLaterCommentEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableLaterCommentEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowTitleToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowTitleToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableFileShareNotificationsForApi" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableFileShareNotificationsForApi",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesReminderSoundOff" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesReminderSoundOff",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesNewLightningReportRunPageEnabled" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesNewLightningReportRunPageEnabled",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowMobilePhoneToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowMobilePhoneToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPermissionsMarketingUser" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsMarketingUser",
+                    "nativeType" : "boolean"
+                },
+                "ForecastEnabled" : {
+                    "type" : "boolean",
+                    "nativeName" : "ForecastEnabled",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowCountryToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowCountryToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "BannerPhotoUrl" : {
+                    "type" : "string",
+                    "nativeName" : "BannerPhotoUrl",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesTaskRemindersCheckboxDefault" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesTaskRemindersCheckboxDefault",
+                    "nativeType" : "boolean"
+                },
+                "UserPermissionsCallCenterAutoLogin" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsCallCenterAutoLogin",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisCommentAfterLikeEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisCommentAfterLikeEmail",
+                    "nativeType" : "boolean"
+                },
+                "Extension" : {
+                    "type" : "string",
+                    "nativeName" : "Extension",
+                    "nativeType" : "string"
+                },
+                "SmallBannerPhotoUrl" : {
+                    "type" : "string",
+                    "nativeName" : "SmallBannerPhotoUrl",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesDisableEndorsementEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableEndorsementEmail",
+                    "nativeType" : "boolean"
+                },
+                "ContactId" : {
+                    "type" : "string",
+                    "nativeName" : "ContactId",
+                    "nativeType" : "string"
+                },
+                "OfflineTrialExpirationDate" : {
+                    "type" : "string",
+                    "nativeName" : "OfflineTrialExpirationDate",
+                    "nativeType" : "string"
+                },
+                "Signature" : {
+                    "type" : "string",
+                    "nativeName" : "Signature",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesHideChatterOnboardingSplash" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideChatterOnboardingSplash",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesActivityRemindersPopup" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesActivityRemindersPopup",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowManagerToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowManagerToGuestUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesPipelineViewHideHelpPopover" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesPipelineViewHideHelpPopover",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowStateToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowStateToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesPreviewCustomTheme" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesPreviewCustomTheme",
+                    "nativeType" : "boolean"
+                },
+                "StayInTouchSignature" : {
+                    "type" : "string",
+                    "nativeName" : "StayInTouchSignature",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesCacheDiagnostics" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesCacheDiagnostics",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowPostalCodeToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowPostalCodeToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableMessageEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableMessageEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesCreateLEXAppsWTShown" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesCreateLEXAppsWTShown",
+                    "nativeType" : "boolean"
+                },
+                "LastViewedDate" : {
+                    "type" : "string",
+                    "nativeName" : "LastViewedDate",
+                    "nativeType" : "string"
+                },
+                "ManagerId" : {
+                    "type" : "string",
+                    "nativeName" : "ManagerId",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesDisableProfilePostEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableProfilePostEmail",
+                    "nativeType" : "boolean"
+                },
+                "Address" : {
+                    "type" : "object",
+                    "nativeName" : "Address",
+                    "nativeType" : "object"
+                },
+                "UserPreferencesHideLightningMigrationModal" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideLightningMigrationModal",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableFollowersEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableFollowersEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableAllFeedsEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableAllFeedsEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesHideBiggerPhotoCallout" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideBiggerPhotoCallout",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesHideEndUserOnboardingAssistantModal" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideEndUserOnboardingAssistantModal",
+                    "nativeType" : "boolean"
+                },
+                "UserPermissionsSFContentUser" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsSFContentUser",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesApexPagesDeveloperMode" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesApexPagesDeveloperMode",
+                    "nativeType" : "boolean"
+                },
+                "EmployeeNumber" : {
+                    "type" : "string",
+                    "nativeName" : "EmployeeNumber",
+                    "nativeType" : "string"
+                },
+                "DelegatedApproverId" : {
+                    "type" : "string",
+                    "nativeName" : "DelegatedApproverId",
+                    "nativeType" : "string"
+                },
+                "ReceivesInfoEmails" : {
+                    "type" : "boolean",
+                    "nativeName" : "ReceivesInfoEmails",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesHideSecondChatterOnboardingSplash" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesHideSecondChatterOnboardingSplash",
+                    "nativeType" : "boolean"
+                },
+                "AccountId" : {
+                    "type" : "string",
+                    "nativeName" : "AccountId",
+                    "nativeType" : "string"
+                },
+                "UserPermissionsChatterAnswersUser" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsChatterAnswersUser",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesUserDebugModePref" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesUserDebugModePref",
+                    "nativeType" : "boolean"
+                },
+                "FullPhotoUrl" : {
+                    "type" : "string",
+                    "nativeName" : "FullPhotoUrl",
+                    "nativeType" : "string"
+                },
+                "SenderEmail" : {
+                    "type" : "string",
+                    "nativeName" : "SenderEmail",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesPreviewLightning" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesPreviewLightning",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesSuppressEventSFXReminders" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesSuppressEventSFXReminders",
+                    "nativeType" : "boolean"
+                },
+                "UserPermissionsAvantgoUser" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPermissionsAvantgoUser",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesDisableMentionsPostEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisableMentionsPostEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowCityToExternalUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowCityToExternalUsers",
+                    "nativeType" : "boolean"
+                },
+                "UserRoleId" : {
+                    "type" : "string",
+                    "nativeName" : "UserRoleId",
+                    "nativeType" : "string"
+                },
+                "EmailPreferencesAutoBccStayInTouch" : {
+                    "type" : "boolean",
+                    "nativeName" : "EmailPreferencesAutoBccStayInTouch",
+                    "nativeType" : "boolean"
+                },
+                "OfflinePdaTrialExpirationDate" : {
+                    "type" : "string",
+                    "nativeName" : "OfflinePdaTrialExpirationDate",
+                    "nativeType" : "string"
+                },
+                "Fax" : {
+                    "type" : "string",
+                    "nativeName" : "Fax",
+                    "nativeType" : "string"
+                },
+                "UserPreferencesDisMentionsCommentEmail" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesDisMentionsCommentEmail",
+                    "nativeType" : "boolean"
+                },
+                "UserPreferencesShowPostalCodeToGuestUsers" : {
+                    "type" : "boolean",
+                    "nativeName" : "UserPreferencesShowPostalCodeToGuestUsers",
+                    "nativeType" : "boolean"
+                }
+            }
+        }
+    }
+}

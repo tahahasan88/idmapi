@@ -1,0 +1,286 @@
+[31] Nov 26, 2023 1:41:35.328 PM org.forgerock.openidm.datasource.jdbc.Activator start
+INFO: Registered DataSourceServiceFactory service
+[31] Nov 26, 2023 1:41:35.355 PM org.forgerock.openidm.datasource.jdbc.Activator start
+INFO: Registered DataSourceServicePool service
+[31] Nov 26, 2023 1:41:35.379 PM org.forgerock.openidm.health.HealthService <init>
+INFO: OpenIDM Health Service component is activated.
+[31] Nov 26, 2023 1:41:35.970 PM org.apache.aries.spifly.BaseActivator log
+INFO: Registered provider org.eclipse.jetty.http.Http1FieldPreEncoder of service org.eclipse.jetty.http.HttpFieldPreEncoder in bundle org.eclipse.jetty.http
+[31] Nov 26, 2023 1:41:37.217 PM org.forgerock.openidm.config.persistence.ConfigBootstrapHelper getBootConfig
+INFO: Bootstrapping with settings from configuration file C:\IDM-7.3.0\openidm\conf\repo.ds.json
+[31] Nov 26, 2023 1:41:37.217 PM org.forgerock.openidm.repo.opendj.impl.Activator start
+INFO: DS bundle starting
+[31] Nov 26, 2023 1:41:38.511 PM org.forgerock.openidm.repo.opendj.impl.Activator start
+INFO: Registered bootstrap repository service
+[31] Nov 26, 2023 1:41:38.511 PM org.forgerock.openidm.repo.opendj.impl.Activator start
+INFO: DS bundle started
+[31] Nov 26, 2023 1:41:38.585 PM org.apache.aries.blueprint.container.BlueprintExtender start
+INFO: No quiesce support is available, so blueprint components will not participate in quiesce operations
+[31] Nov 26, 2023 1:41:39.206 PM org.eclipse.jetty.util.log.Log initialized
+INFO: Logging initialized @38455ms to org.eclipse.jetty.util.log.JavaUtilLog
+[31] Nov 26, 2023 1:41:39.247 PM org.ops4j.pax.web.service.internal.Activator start
+INFO: EventAdmin support enabled, servlet events will be posted to topics.
+[31] Nov 26, 2023 1:41:39.250 PM org.ops4j.pax.web.service.internal.Activator start
+INFO: LogService support enabled, log events will be created.
+[31] Nov 26, 2023 1:41:39.253 PM org.ops4j.pax.web.service.internal.Activator start
+INFO: Pax Web started
+[31] Nov 26, 2023 1:41:39.291 PM org.apache.aries.spifly.BaseActivator log
+INFO: Registered provider org.eclipse.jetty.websocket.common.extensions.identity.IdentityExtension of service org.eclipse.jetty.websocket.api.extensions.Extension in bundle org.eclipse.jetty.websocket.common
+[31] Nov 26, 2023 1:41:39.295 PM org.apache.aries.spifly.BaseActivator log
+INFO: Registered provider org.eclipse.jetty.websocket.common.extensions.fragment.FragmentExtension of service org.eclipse.jetty.websocket.api.extensions.Extension in bundle org.eclipse.jetty.websocket.common
+[31] Nov 26, 2023 1:41:39.303 PM org.apache.aries.spifly.BaseActivator log
+INFO: Registered provider org.eclipse.jetty.websocket.common.extensions.compress.PerMessageDeflateExtension of service org.eclipse.jetty.websocket.api.extensions.Extension in bundle org.eclipse.jetty.websocket.common
+[31] Nov 26, 2023 1:41:39.306 PM org.apache.aries.spifly.BaseActivator log
+INFO: Registered provider org.eclipse.jetty.websocket.common.extensions.compress.DeflateFrameExtension of service org.eclipse.jetty.websocket.api.extensions.Extension in bundle org.eclipse.jetty.websocket.common
+[31] Nov 26, 2023 1:41:39.308 PM org.apache.aries.spifly.BaseActivator log
+INFO: Registered provider org.eclipse.jetty.websocket.common.extensions.compress.XWebkitDeflateFrameExtension of service org.eclipse.jetty.websocket.api.extensions.Extension in bundle org.eclipse.jetty.websocket.common
+[31] Nov 26, 2023 1:41:39.311 PM org.apache.aries.spifly.BaseActivator log
+INFO: Registered provider org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer of service javax.servlet.ServletContainerInitializer in bundle org.eclipse.jetty.websocket.server
+[92] Nov 26, 2023 1:41:40.082 PM org.ops4j.pax.web.service.jetty.internal.JettyServerImpl start
+INFO: Pax Web available at [0.0.0.0]:[8082]
+[92] Nov 26, 2023 1:41:40.087 PM org.ops4j.pax.web.service.jetty.internal.JettyServerImpl start
+INFO: Pax Web available at [0.0.0.0]:[443]
+[92] Nov 26, 2023 1:41:40.088 PM org.ops4j.pax.web.service.jetty.internal.JettyServerImpl start
+INFO: Pax Web available at [0.0.0.0]:[8444]
+[92] Nov 26, 2023 1:41:40.103 PM org.ops4j.pax.web.service.internal.HttpServiceFactoryImpl getService
+INFO: Binding bundle: [org.apache.felix.webconsole [299]] to http service
+[44] Nov 26, 2023 1:41:40.657 PM org.forgerock.openidm.config.persistence.ConfigInstallStarter activate
+INFO: Services ready to handle config install.
+[44] Nov 26, 2023 1:41:40.660 PM org.forgerock.openidm.config.persistence.ConfigInstallStarter activate
+INFO: Configuration from file enabled
+[44] Nov 26, 2023 1:41:40.775 PM org.ops4j.pax.web.service.internal.HttpServiceFactoryImpl getService
+INFO: Binding bundle: [org.forgerock.openidm.httpcontext [237]] to http service
+[44] Nov 26, 2023 1:41:40.814 PM org.forgerock.openidm.http.ContextRegistrator activateSecurityConfigurators
+INFO: Activated security configurator org.forgerock.openidm.http.internal.JettySecurityConfigurator
+[97] Nov 26, 2023 1:41:40.917 PM org.forgerock.openidm.config.installer.JSONConfigInstaller setConfig
+INFO: Loaded changed configuration for policy from policy.json
+[97] Nov 26, 2023 1:41:40.960 PM org.forgerock.openidm.config.installer.JSONConfigInstaller setConfig
+INFO: Loaded changed configuration for servletfilter/cors from servletfilter-cors.json
+[97] Nov 26, 2023 1:41:40.982 PM org.forgerock.openidm.config.installer.JSONConfigInstaller setConfig
+INFO: Loaded changed configuration for access from access.json
+[97] Nov 26, 2023 1:41:41.023 PM org.forgerock.openidm.config.installer.JSONConfigInstaller setConfig
+INFO: Loaded changed configuration for authentication from authentication.json
+[97] Nov 26, 2023 1:41:41.052 PM org.forgerock.openidm.config.installer.JSONConfigInstaller setConfig
+INFO: Loaded changed configuration for repo.ds from repo.ds.json
+[97] Nov 26, 2023 1:41:41.263 PM org.forgerock.openidm.config.installer.JSONConfigInstaller setConfig
+INFO: Loaded changed configuration for managed from managed.json
+[97] Nov 26, 2023 1:41:41.454 PM org.forgerock.openidm.config.installer.JSONConfigInstaller setConfig
+INFO: Loaded changed configuration for audit from audit.json
+[97] Nov 26, 2023 1:41:41.556 PM org.ops4j.pax.web.service.internal.HttpServiceFactoryImpl ungetService
+INFO: Unbinding bundle: [org.apache.felix.webconsole [299]]
+[97] Nov 26, 2023 1:41:41.567 PM org.ops4j.pax.web.service.internal.HttpServiceFactoryImpl getService
+INFO: Binding bundle: [org.apache.felix.webconsole [299]] to http service
+[44] Nov 26, 2023 1:41:42.213 PM org.forgerock.openidm.schema.impl.SchemaServiceImpl activate
+INFO: OpenIDM Schema Service is activated.
+[44] Nov 26, 2023 1:41:42.537 PM org.ops4j.pax.web.utils.ServletContainerInitializerScanner scanBundles
+INFO: will add org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer to ServletContainerInitializers
+[44] Nov 26, 2023 1:41:42.539 PM org.ops4j.pax.web.utils.ServletContainerInitializerScanner scanBundles
+INFO: added ServletContainerInitializer: org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer
+[44] Nov 26, 2023 1:41:42.604 PM org.ops4j.pax.web.service.jetty.internal.HttpServiceContext <init>
+INFO: registering context DefaultHttpContext [bundle=org.apache.felix.webconsole [299], contextID=custom], with context-name: 
+[44] Nov 26, 2023 1:41:42.675 PM org.eclipse.jetty.websocket.server.WebSocketServerFactory findDecoratedObjectFactory
+INFO: No DecoratedObjectFactory provided, using new org.eclipse.jetty.util.DecoratedObjectFactory[decorators=1]
+[44] Nov 26, 2023 1:41:42.683 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: DefaultSessionIdManager workerName=node0
+[44] Nov 26, 2023 1:41:42.684 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: No SessionScavenger set, using defaults
+[44] Nov 26, 2023 1:41:42.686 PM org.eclipse.jetty.server.session.HouseKeeper startScavenging
+INFO: node0 Scavenging every 600000ms
+[44] Nov 26, 2023 1:41:42.726 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started HttpServiceContext{httpContext=DefaultHttpContext [bundle=org.apache.felix.webconsole [299], contextID=custom]}
+[44] Nov 26, 2023 1:41:42.729 PM org.eclipse.jetty.server.Server doStart
+INFO: jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 17.0.9+9-adhoc..jdk17u
+[44] Nov 26, 2023 1:41:42.827 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started 0.0.0.0:8082@5eaf2db4{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+[44] Nov 26, 2023 1:41:42.864 PM org.eclipse.jetty.util.ssl.SslContextFactory load
+INFO: x509=X509@59f8b346(selfservice,h=[selfservice],a=[],w=[]) for Server@35bbaee3[provider=null,keyStore=file:///C:/IDM-7.3.0/openidm/security/keystore.jceks,trustStore=file:///C:/IDM-7.3.0/openidm/security/truststore]
+[44] Nov 26, 2023 1:41:42.865 PM org.eclipse.jetty.util.ssl.SslContextFactory load
+INFO: x509=X509@2b13283a(openidm-localhost,h=[openidm-localhost],a=[],w=[]) for Server@35bbaee3[provider=null,keyStore=file:///C:/IDM-7.3.0/openidm/security/keystore.jceks,trustStore=file:///C:/IDM-7.3.0/openidm/security/truststore]
+[44] Nov 26, 2023 1:41:43.153 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started 0.0.0.0:443@13d61da5{SSL, (ssl, http/1.1)}{0.0.0.0:443}
+[44] Nov 26, 2023 1:41:43.176 PM org.eclipse.jetty.util.ssl.SslContextFactory load
+INFO: x509=X509@562f6ef8(selfservice,h=[selfservice],a=[],w=[]) for Server@1f71147b[provider=null,keyStore=file:///C:/IDM-7.3.0/openidm/security/keystore.jceks,trustStore=file:///C:/IDM-7.3.0/openidm/security/truststore]
+[44] Nov 26, 2023 1:41:43.177 PM org.eclipse.jetty.util.ssl.SslContextFactory load
+INFO: x509=X509@7887c27a(openidm-localhost,h=[openidm-localhost],a=[],w=[]) for Server@1f71147b[provider=null,keyStore=file:///C:/IDM-7.3.0/openidm/security/keystore.jceks,trustStore=file:///C:/IDM-7.3.0/openidm/security/truststore]
+[44] Nov 26, 2023 1:41:43.460 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started 0.0.0.0:8444@6a20b4c5{SSL, (ssl, http/1.1)}{0.0.0.0:8444}
+[44] Nov 26, 2023 1:41:43.460 PM org.eclipse.jetty.server.Server doStart
+INFO: Started @42710ms
+[44] Nov 26, 2023 1:41:43.763 PM org.forgerock.openidm.servlet.internal.ServletConnectionFactory activate
+INFO: Servlet ConnectionFactory created.
+[44] Nov 26, 2023 1:41:43.910 PM org.forgerock.openidm.router.impl.JsonResourceRouterService <init>
+INFO: IDMConnectionFactory service activated.
+[44] Nov 26, 2023 1:41:43.923 PM org.forgerock.openidm.script.impl.ScriptRegistryService bindConnectionFactory
+INFO: Resource functions are enabled
+[44] Nov 26, 2023 1:41:43.925 PM org.forgerock.openidm.script.impl.ScriptRegistryService bindCryptoService
+INFO: Crypto functions are enabled
+[44] Nov 26, 2023 1:41:43.930 PM org.forgerock.openidm.script.impl.ScriptRegistryService activate
+INFO: OpenIDM Script Service component is activated.
+[44] Nov 26, 2023 1:41:44.847 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "repairMetadata" component is activated.
+[44] Nov 26, 2023 1:41:44.886 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "removeRepoPathFromRelationships" component is activated.
+[44] Nov 26, 2023 1:41:44.940 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "mappingDetails" component is activated.
+[44] Nov 26, 2023 1:41:44.978 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "oauthproxy" component is activated.
+[44] Nov 26, 2023 1:41:45.021 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "gettasksview" component is activated.
+[44] Nov 26, 2023 1:41:45.064 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "validateQueryFilter" component is activated.
+[44] Nov 26, 2023 1:41:45.106 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "updateInternalUserAndInternalRoleEntries" component is activated.
+[44] Nov 26, 2023 1:41:45.149 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "getavailableuserstoassign" component is activated.
+[44] Nov 26, 2023 1:41:45.188 PM org.forgerock.openidm.customendpoint.impl.EndpointsService <init>
+INFO: OpenIDM Endpoints Service "getprocessesforuser" component is activated.
+[44] Nov 26, 2023 1:41:45.247 PM org.forgerock.openidm.notification.NotificationExecutor init
+INFO: Notification filters are disabled
+[44] Nov 26, 2023 1:41:49.430 PM org.forgerock.openidm.policy.PolicyService <init>
+INFO: OpenIDM Policy Service component is activated.
+[44] Nov 26, 2023 1:41:49.729 PM org.forgerock.openidm.audit.impl.AuditServiceImpl activate
+INFO: Audit service started.
+[44] Nov 26, 2023 1:41:49.977 PM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Using default implementation for ThreadExecutor
+[44] Nov 26, 2023 1:41:49.979 PM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: pool-3-thread-1
+[44] Nov 26, 2023 1:41:50.003 PM org.quartz.core.QuartzSchedulerThread <init>
+INFO: QuartzSchedulerThread Inheriting ContextClassLoader of thread: pool-3-thread-1
+[44] Nov 26, 2023 1:41:50.004 PM org.quartz.core.SchedulerSignalerImpl <init>
+INFO: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[44] Nov 26, 2023 1:41:50.005 PM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.2.3.2 created.
+[44] Nov 26, 2023 1:41:50.005 PM org.forgerock.openidm.quartz.RepoJobStore initialize
+INFO: Initializing RepoJobStore
+[44] Nov 26, 2023 1:41:50.008 PM org.forgerock.openidm.quartz.RepoJobStore initialize
+INFO: Registering with ClusterManagementService
+[44] Nov 26, 2023 1:41:50.008 PM org.quartz.core.QuartzScheduler initialize
+INFO: Scheduler meta-data: Quartz Scheduler (v2.3.2) 'persisted_1700991709955' with instanceId 'node1'%0A  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.%0A  NOT STARTED.%0A  Currently in standby mode.%0A  Number of jobs executed: 0%0A  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.%0A  Using job-store 'org.forgerock.openidm.quartz.RepoJobStore' - which supports persistence. and is clustered.%0A
+[44] Nov 26, 2023 1:41:50.009 PM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'persisted_1700991709955' initialized from an externally provided properties instance.
+[44] Nov 26, 2023 1:41:50.011 PM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: 2.3.2
+[44] Nov 26, 2023 1:41:50.013 PM org.forgerock.openidm.scheduler.PersistedScheduler newScheduler
+INFO: Starting Persistent Scheduler
+[44] Nov 26, 2023 1:41:50.014 PM org.forgerock.openidm.quartz.RepoJobStore schedulerStarted
+INFO: Job Scheduler Started
+[44] Nov 26, 2023 1:41:50.211 PM org.quartz.core.QuartzScheduler start
+INFO: Scheduler persisted_1700991709955_$_node1 started.
+[44] Nov 26, 2023 1:41:50.316 PM org.quartz.core.SchedulerSignalerImpl <init>
+INFO: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[44] Nov 26, 2023 1:41:50.317 PM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.2.3.2 created.
+[44] Nov 26, 2023 1:41:50.317 PM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+[44] Nov 26, 2023 1:41:50.318 PM org.quartz.core.QuartzScheduler initialize
+INFO: Scheduler meta-data: Quartz Scheduler (v2.3.2) 'memory_1700991710304' with instanceId 'Taha'%0A  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.%0A  NOT STARTED.%0A  Currently in standby mode.%0A  Number of jobs executed: 0%0A  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.%0A  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.%0A
+[44] Nov 26, 2023 1:41:50.319 PM org.quartz.impl.DirectSchedulerFactory createScheduler
+INFO: Quartz scheduler 'memory_1700991710304
+[44] Nov 26, 2023 1:41:50.319 PM org.quartz.impl.DirectSchedulerFactory createScheduler
+INFO: Quartz scheduler version: 2.3.2
+[44] Nov 26, 2023 1:41:50.320 PM org.quartz.core.QuartzScheduler start
+INFO: Scheduler memory_1700991710304_$_Taha started.
+[44] Nov 26, 2023 1:41:50.320 PM org.forgerock.openidm.scheduler.MemoryScheduler <init>
+INFO: Started Volatile Scheduler
+[44] Nov 26, 2023 1:41:50.650 PM org.forgerock.openidm.router.impl.RouterConfig createFiltersFromConfig
+INFO: Router filters added.
+[44] Nov 26, 2023 1:41:50.724 PM org.forgerock.openidm.idp.IdentityProviderService <init>
+INFO: OpenIDM Identity Provider Service is activated.
+[44] Nov 26, 2023 1:41:50.804 PM org.forgerock.openidm.auth.AuthenticationService <init>
+INFO: Activating Authentication Service with configuration {ref_AuthenticationService_Audit.target=(openidm.router.prefix=audit/*), service.vendor=ForgeRock AS., service.description=OpenIDM Authentication Service, $006.target=(component.name=org.forgerock.openidm.auth.config), $003.target=(component.name=org.forgerock.openidm.router.internal), component.name=org.forgerock.openidm.auth, openidm.router.prefix=authentication, component.id=9}
+[44] Nov 26, 2023 1:41:51.273 PM org.forgerock.openidm.external.rest.RestService activate
+INFO: External REST connectivity started.
+[44] Nov 26, 2023 1:41:51.990 PM org.ops4j.pax.web.service.internal.HttpServiceFactoryImpl getService
+INFO: Binding bundle: [org.forgerock.openidm.servlet-registrator [274]] to http service
+[44] Nov 26, 2023 1:41:51.996 PM org.ops4j.pax.web.utils.ServletContainerInitializerScanner scanBundles
+INFO: will add org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer to ServletContainerInitializers
+[44] Nov 26, 2023 1:41:51.998 PM org.ops4j.pax.web.utils.ServletContainerInitializerScanner scanBundles
+INFO: added ServletContainerInitializer: org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer
+[44] Nov 26, 2023 1:41:51.999 PM org.ops4j.pax.web.service.jetty.internal.HttpServiceContext <init>
+INFO: registering context org.ops4j.pax.web.service.internal.DefaultSharedWebContainerContext@7caf0af6, with context-name: 
+[44] Nov 26, 2023 1:41:52.001 PM org.eclipse.jetty.websocket.server.WebSocketServerFactory findDecoratedObjectFactory
+INFO: No DecoratedObjectFactory provided, using new org.eclipse.jetty.util.DecoratedObjectFactory[decorators=1]
+[44] Nov 26, 2023 1:41:52.011 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started HttpServiceContext{httpContext=org.ops4j.pax.web.service.internal.DefaultSharedWebContainerContext@7caf0af6}
+[44] Nov 26, 2023 1:41:52.011 PM org.forgerock.openidm.servlet.internal.ErrorServletComponent activate
+INFO: Registered servlet at /error
+[44] Nov 26, 2023 1:41:52.012 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerErrorPage
+INFO: Successfully registered global servlet error handler /error
+[44] Nov 26, 2023 1:41:52.132 PM org.forgerock.openidm.servlet.internal.ServletComponent <init>
+INFO: Registered servlet at /openidm
+[44] Nov 26, 2023 1:41:52.154 PM org.forgerock.openidm.servletregistration.impl.ServletFilterConfiguration activate
+INFO: Activating servlet registrator with configuration {config.factory-pid=upload, component.name=org.forgerock.openidm.servletfilter, jsonconfig={%0D%0A    "classPathURLs" : [ ],%0D%0A    "systemProperties" : { },%0D%0A    "requestAttributes" : { },%0D%0A    "scriptExtensions" : { },%0D%0A    "initParams" : {%0D%0A        "maxRequestSizeInMegabytes" : 50%0D%0A    },%0D%0A    "urlPatterns" : [%0D%0A        "&{openidm.servlet.upload.alias}/*"%0D%0A    ],%0D%0A    "filterClass" : "org.forgerock.openidm.jetty.LargePayloadServletFilter"%0D%0A}, service.factoryPid=org.forgerock.openidm.servletfilter, felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/servletfilter-upload.json, service.pid=org.forgerock.openidm.servletfilter.0e917e11-2e8b-426a-9b9e-e300d23acbae, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-806, component.id=145, _id=org.forgerock.openidm.servletfilter.0e917e11-2e8b-426a-9b9e-e300d23acbae}
+[44] Nov 26, 2023 1:41:52.157 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Using filter class: org.forgerock.openidm.jetty.LargePayloadServletFilter
+[44] Nov 26, 2023 1:41:52.158 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Added URLs {  })) to filter classpath
+[44] Nov 26, 2023 1:41:52.174 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilter
+INFO: Successfully registered servlet filter { "classPathURLs": [  ], "systemProperties": {  }, "requestAttributes": {  }, "scriptExtensions": {  }, "initParams": { "maxRequestSizeInMegabytes": 50 }, "urlPatterns": [ "/upload/*" ], "filterClass": "org.forgerock.openidm.jetty.LargePayloadServletFilter" }
+[44] Nov 26, 2023 1:41:52.189 PM org.forgerock.openidm.servletregistration.impl.ServletFilterConfiguration activate
+INFO: Successfully registered servlet filter {config.factory-pid=upload, component.name=org.forgerock.openidm.servletfilter, jsonconfig={%0D%0A    "classPathURLs" : [ ],%0D%0A    "systemProperties" : { },%0D%0A    "requestAttributes" : { },%0D%0A    "scriptExtensions" : { },%0D%0A    "initParams" : {%0D%0A        "maxRequestSizeInMegabytes" : 50%0D%0A    },%0D%0A    "urlPatterns" : [%0D%0A        "&{openidm.servlet.upload.alias}/*"%0D%0A    ],%0D%0A    "filterClass" : "org.forgerock.openidm.jetty.LargePayloadServletFilter"%0D%0A}, service.factoryPid=org.forgerock.openidm.servletfilter, felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/servletfilter-upload.json, service.pid=org.forgerock.openidm.servletfilter.0e917e11-2e8b-426a-9b9e-e300d23acbae, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-806, component.id=145, _id=org.forgerock.openidm.servletfilter.0e917e11-2e8b-426a-9b9e-e300d23acbae}
+[44] Nov 26, 2023 1:41:52.189 PM org.forgerock.openidm.servletregistration.impl.ServletFilterConfiguration activate
+INFO: Activating servlet registrator with configuration {config.factory-pid=payload, component.name=org.forgerock.openidm.servletfilter, jsonconfig={%0D%0A    "classPathURLs" : [ ],%0D%0A    "systemProperties" : { },%0D%0A    "requestAttributes" : { },%0D%0A    "scriptExtensions" : { },%0D%0A    "initParams" : {%0D%0A        "maxRequestSizeInMegabytes" : 5%0D%0A    },%0D%0A    "urlPatterns" : [%0D%0A        "&{openidm.servlet.alias}/*"%0D%0A    ],%0D%0A    "filterClass" : "org.forgerock.openidm.jetty.LargePayloadServletFilter"%0D%0A}, service.factoryPid=org.forgerock.openidm.servletfilter, felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/servletfilter-payload.json, service.pid=org.forgerock.openidm.servletfilter.8ae7972b-a3c8-4244-b95b-177927f5ef19, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-761, component.id=146, _id=org.forgerock.openidm.servletfilter.8ae7972b-a3c8-4244-b95b-177927f5ef19}
+[44] Nov 26, 2023 1:41:52.191 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Using filter class: org.forgerock.openidm.jetty.LargePayloadServletFilter
+[44] Nov 26, 2023 1:41:52.193 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Added URLs {  })) to filter classpath
+[44] Nov 26, 2023 1:41:52.193 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Using filter class: org.forgerock.openidm.jetty.LargePayloadServletFilter
+[44] Nov 26, 2023 1:41:52.193 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Added URLs {  })) to filter classpath
+[44] Nov 26, 2023 1:41:52.195 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilter
+INFO: Successfully registered servlet filter { "classPathURLs": [  ], "systemProperties": {  }, "requestAttributes": {  }, "scriptExtensions": {  }, "initParams": { "maxRequestSizeInMegabytes": 5 }, "urlPatterns": [ "/openidm/*" ], "filterClass": "org.forgerock.openidm.jetty.LargePayloadServletFilter" }
+[44] Nov 26, 2023 1:41:52.211 PM org.forgerock.openidm.servletregistration.impl.ServletFilterConfiguration activate
+INFO: Successfully registered servlet filter {config.factory-pid=payload, component.name=org.forgerock.openidm.servletfilter, jsonconfig={%0D%0A    "classPathURLs" : [ ],%0D%0A    "systemProperties" : { },%0D%0A    "requestAttributes" : { },%0D%0A    "scriptExtensions" : { },%0D%0A    "initParams" : {%0D%0A        "maxRequestSizeInMegabytes" : 5%0D%0A    },%0D%0A    "urlPatterns" : [%0D%0A        "&{openidm.servlet.alias}/*"%0D%0A    ],%0D%0A    "filterClass" : "org.forgerock.openidm.jetty.LargePayloadServletFilter"%0D%0A}, service.factoryPid=org.forgerock.openidm.servletfilter, felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/servletfilter-payload.json, service.pid=org.forgerock.openidm.servletfilter.8ae7972b-a3c8-4244-b95b-177927f5ef19, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-761, component.id=146, _id=org.forgerock.openidm.servletfilter.8ae7972b-a3c8-4244-b95b-177927f5ef19}
+[44] Nov 26, 2023 1:41:52.211 PM org.forgerock.openidm.servletregistration.impl.ServletFilterConfiguration activate
+INFO: Activating servlet registrator with configuration {config.factory-pid=cors, component.name=org.forgerock.openidm.servletfilter, jsonconfig={%0D%0A    "classPathURLs" : [ ],%0D%0A    "filterClass" : "org.eclipse.jetty.servlets.CrossOriginFilter",%0D%0A    "initParams" : {%0D%0A        "allowCredentials" : false,%0D%0A        "allowedHeaders" : "authorization,accept,content-type,origin,x-requested-with,cache-control,accept-api-version,if-match",%0D%0A        "allowedMethods" : "GET,POST,PUT,DELETE,PATCH",%0D%0A        "allowedOrigins" : "*",%0D%0A        "chainPreflight" : false%0D%0A    },%0D%0A    "requestAttributes" : { },%0D%0A    "scriptExtensions" : { },%0D%0A    "systemProperties" : { },%0D%0A    "urlPatterns" : [%0D%0A        "/*"%0D%0A    ]%0D%0A}, service.factoryPid=org.forgerock.openidm.servletfilter, felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/servletfilter-cors.json, service.pid=org.forgerock.openidm.servletfilter.38ad219a-47f4-4e99-97da-21d0dbe6dbc2, _rev=ff5f82a1-a9d9-4936-9071-e30cab9ba492-2, component.id=147, _id=org.forgerock.openidm.servletfilter.38ad219a-47f4-4e99-97da-21d0dbe6dbc2}
+[44] Nov 26, 2023 1:41:52.212 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Using filter class: org.forgerock.openidm.jetty.LargePayloadServletFilter
+[44] Nov 26, 2023 1:41:52.214 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Added URLs {  })) to filter classpath
+[44] Nov 26, 2023 1:41:52.216 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Using filter class: org.forgerock.openidm.jetty.LargePayloadServletFilter
+[44] Nov 26, 2023 1:41:52.216 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Added URLs {  })) to filter classpath
+[44] Nov 26, 2023 1:41:52.217 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Using filter class: org.eclipse.jetty.servlets.CrossOriginFilter
+[44] Nov 26, 2023 1:41:52.217 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilterWithWebContainer
+INFO: Added URLs {  })) to filter classpath
+[44] Nov 26, 2023 1:41:52.223 PM org.forgerock.openidm.servletregistration.impl.ServletRegistrationSingleton registerFilter
+INFO: Successfully registered servlet filter { "classPathURLs": [  ], "filterClass": "org.eclipse.jetty.servlets.CrossOriginFilter", "initParams": { "allowCredentials": false, "allowedHeaders": "authorization,accept,content-type,origin,x-requested-with,cache-control,accept-api-version,if-match", "allowedMethods": "GET,POST,PUT,DELETE,PATCH", "allowedOrigins": "*", "chainPreflight": false }, "requestAttributes": {  }, "scriptExtensions": {  }, "systemProperties": {  }, "urlPatterns": [ "/*" ] }
+[44] Nov 26, 2023 1:41:52.235 PM org.forgerock.openidm.servletregistration.impl.ServletFilterConfiguration activate
+INFO: Successfully registered servlet filter {config.factory-pid=cors, component.name=org.forgerock.openidm.servletfilter, jsonconfig={%0D%0A    "classPathURLs" : [ ],%0D%0A    "filterClass" : "org.eclipse.jetty.servlets.CrossOriginFilter",%0D%0A    "initParams" : {%0D%0A        "allowCredentials" : false,%0D%0A        "allowedHeaders" : "authorization,accept,content-type,origin,x-requested-with,cache-control,accept-api-version,if-match",%0D%0A        "allowedMethods" : "GET,POST,PUT,DELETE,PATCH",%0D%0A        "allowedOrigins" : "*",%0D%0A        "chainPreflight" : false%0D%0A    },%0D%0A    "requestAttributes" : { },%0D%0A    "scriptExtensions" : { },%0D%0A    "systemProperties" : { },%0D%0A    "urlPatterns" : [%0D%0A        "/*"%0D%0A    ]%0D%0A}, service.factoryPid=org.forgerock.openidm.servletfilter, felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/servletfilter-cors.json, service.pid=org.forgerock.openidm.servletfilter.38ad219a-47f4-4e99-97da-21d0dbe6dbc2, _rev=ff5f82a1-a9d9-4936-9071-e30cab9ba492-2, component.id=147, _id=org.forgerock.openidm.servletfilter.38ad219a-47f4-4e99-97da-21d0dbe6dbc2}
+[44] Nov 26, 2023 1:41:52.243 PM org.forgerock.openidm.servlet.resources.ResourceServlet activate
+INFO: Activating resource servlet with configuration {config.factory-pid=oauth, component.name=org.forgerock.openidm.ui.context, jsonconfig={%0D%0A    "enabled" : true,%0D%0A    "cacheEnabled" : true,%0D%0A    "urlContextRoot" : "/oauthReturn",%0D%0A    "defaultDir" : "&{idm.install.dir}/ui/oauth/default",%0D%0A    "extensionDir" : "&{idm.install.dir}/ui/oauth/extension"%0D%0A}, service.factoryPid=org.forgerock.openidm.ui.context, authFilter.target=(component.name=org.forgerock.openidm.auth.config), felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/ui.context-oauth.json, service.pid=org.forgerock.openidm.ui.context.cf419110-2f49-460b-8b26-df3525616c53, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-759, component.id=140, _id=org.forgerock.openidm.ui.context.cf419110-2f49-460b-8b26-df3525616c53}
+[44] Nov 26, 2023 1:41:52.245 PM org.forgerock.openidm.servlet.resources.ResourceServlet activate
+INFO: Activating resource servlet with configuration {config.factory-pid=api, component.name=org.forgerock.openidm.ui.context, jsonconfig={%0D%0A    "enabled" : true,%0D%0A    "cacheEnabled" : false,%0D%0A    "authEnabled" : true,%0D%0A    "urlContextRoot" : "/api",%0D%0A    "defaultDir" : "&{idm.install.dir}/ui/api/default",%0D%0A    "extensionDir" : "&{idm.install.dir}/ui/api/extension"%0D%0A}, service.factoryPid=org.forgerock.openidm.ui.context, authFilter.target=(component.name=org.forgerock.openidm.auth.config), felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/ui.context-api.json, service.pid=org.forgerock.openidm.ui.context.0487d6ac-729e-47de-8fca-fdf391df0143, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-790, component.id=141, _id=org.forgerock.openidm.ui.context.0487d6ac-729e-47de-8fca-fdf391df0143}
+[44] Nov 26, 2023 1:41:52.247 PM org.forgerock.openidm.servlet.resources.ResourceServlet activate
+INFO: Activating resource servlet with configuration {config.factory-pid=enduser, component.name=org.forgerock.openidm.ui.context, jsonconfig={%0D%0A    "enabled" : true,%0D%0A    "cacheEnabled" : true,%0D%0A    "urlContextRoot" : "/",%0D%0A    "defaultDir" : "&{idm.install.dir}/ui/enduser",%0D%0A    "responseHeaders" : {%0D%0A        "X-Frame-Options" : "DENY"%0D%0A    }%0D%0A}, service.factoryPid=org.forgerock.openidm.ui.context, authFilter.target=(component.name=org.forgerock.openidm.auth.config), felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/ui.context-enduser.json, service.pid=org.forgerock.openidm.ui.context.b458327a-feea-41ce-ac6a-e5e6593916a1, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-762, component.id=142, _id=org.forgerock.openidm.ui.context.b458327a-feea-41ce-ac6a-e5e6593916a1}
+[44] Nov 26, 2023 1:41:52.249 PM org.forgerock.openidm.servlet.resources.ResourceServlet activate
+INFO: Activating resource servlet with configuration {config.factory-pid=admin, component.name=org.forgerock.openidm.ui.context, jsonconfig={%0D%0A    "enabled" : true,%0D%0A    "cacheEnabled" : true,%0D%0A    "urlContextRoot" : "/admin",%0D%0A    "defaultDir" : "&{idm.install.dir}/ui/admin/default",%0D%0A    "extensionDir" : "&{idm.install.dir}/ui/admin/extension",%0D%0A    "responseHeaders" : {%0D%0A        "X-Frame-Options" : "SAMEORIGIN"%0D%0A    }%0D%0A}, service.factoryPid=org.forgerock.openidm.ui.context, authFilter.target=(component.name=org.forgerock.openidm.auth.config), felix.fileinstall.filename=file:/C:/IDM-7.3.0/openidm/conf/ui.context-admin.json, service.pid=org.forgerock.openidm.ui.context.b2c1fab1-c6bb-40b9-987c-29940a5730d9, _rev=0f894d79-9d7b-49b8-bd20-de971e2da791-788, component.id=143, _id=org.forgerock.openidm.ui.context.b2c1fab1-c6bb-40b9-987c-29940a5730d9}
+[93] Nov 26, 2023 1:42:09.369 PM org.forgerock.openidm.health.HealthService$4 run
+SEVERE: OpenIDM failure during startup, ACTIVE_NOT_READY: Not all modules started [] [org.apache.felix.scr] []
+[44] Nov 26, 2023 1:42:10.935 PM org.forgerock.openidm.provisioner.openicf.impl.ConnectorInfoProviderService activate
+INFO: ConnectorInfoProviderService with OpenICF Version[1.5] is activated.
+[44] Nov 26, 2023 1:42:11.318 PM org.forgerock.openidm.consent.impl.ConsentServiceV1 <init>
+INFO: OpenIDM Consent Service is activated.
+[44] Nov 26, 2023 1:42:11.369 PM org.forgerock.openidm.consent.impl.ConsentServiceV1 <init>
+INFO: OpenIDM Consent Service is activated.
+[44] Nov 26, 2023 1:42:11.369 PM org.forgerock.openidm.consent.impl.ConsentServiceV2 <init>
+INFO: OpenIDM Consent Service (v2) is activated.
+[44] Nov 26, 2023 1:42:12.052 PM org.identityconnectors.framework.impl.api.local.operations.ConnectorOperationalContext getPool
+INFO: Creating new pool: ConnectorKey( bundleName=org.forgerock.openicf.connectors.ldap-connector bundleVersion=1.5.20.14 connectorName=org.identityconnectors.ldap.LdapConnector )
+[44] Nov 26, 2023 1:42:12.362 PM org.forgerock.openidm.provisioner.openicf.impl.OpenICFProvisionerService activate
+INFO: OpenICF Provisioner Service component ldap is activated.
+[44] Nov 26, 2023 1:42:12.460 PM org.identityconnectors.framework.impl.api.local.operations.ConnectorOperationalContext getPool
+INFO: Creating new pool: ConnectorKey( bundleName=org.forgerock.openicf.connectors.ldap-connector bundleVersion=1.5.20.14 connectorName=org.identityconnectors.ldap.LdapConnector )
+[44] Nov 26, 2023 1:42:12.698 PM org.forgerock.openidm.provisioner.openicf.impl.OpenICFProvisionerService activate
+INFO: OpenICF Provisioner Service component preprod is activated.
+[44] Nov 26, 2023 1:42:13.100 PM org.forgerock.openidm.sync.ReconciliationService <init>
+INFO: Reconciliation service started.
+[24] Nov 26, 2023 1:42:18.343 PM org.forgerock.openidm.cluster.ClusterManager startClusterManagement
+INFO: Starting Cluster Management
+[24] Nov 26, 2023 1:42:18.343 PM org.forgerock.openidm.cluster.ClusterManager$ClusterManagerThread startup
+INFO: Starting the cluster manager thread
+[24] Nov 26, 2023 1:42:18.343 PM org.forgerock.openidm.health.HealthService setState
+INFO: OpenIDM ready OpenIDM version "7.3.0" (build: 20230403194803, revision: 0cee568) jenkins-idm-release-sustaining%2F7.3.x-3

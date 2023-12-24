@@ -1,0 +1,17 @@
+{
+    "enabled" : true,
+    "path" : "config/*",
+    "methods" : [
+        "update",
+        "patch"
+    ],
+    "condition" : "request/resourcePath eq 'selfservice.terms'",
+    "target" : {
+        "resource" : "managed/user",
+        "_queryFilter" : "true"
+    },
+    "notification" : {
+        "notificationType" : "info",
+        "message" : "We have updated our Terms and Conditions."
+    }
+}

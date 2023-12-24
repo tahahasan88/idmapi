@@ -1,0 +1,33 @@
+<!--
+  Copyright 2015-2019 ForgeRock AS. All Rights Reserved
+
+  Use of this code requires a commercial software license with ForgeRock AS.
+  or with one of its affiliates. All use shall be exclusively subject
+  to such license between the licensee and ForgeRock AS.
+-->
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.forgerock.openidm</groupId>
+    <artifactId>sample-trusted-servletfilter</artifactId>
+    <packaging>bundle</packaging>
+    <version>1.0</version>
+    <name>Sample Trusted Servlet Filter</name>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>4.2.0</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

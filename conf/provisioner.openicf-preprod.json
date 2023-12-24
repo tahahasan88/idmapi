@@ -1,0 +1,480 @@
+{
+    "configurationProperties" : {
+        "accountObjectClasses" : [
+            "top",
+            "person",
+            "organizationalPerson",
+            "inetOrgPerson",
+            "iplanet-am-user-service",
+            "cutomUserObjectClass"
+        ],
+        "accountSearchFilter" : null,
+        "accountSynchronizationFilter" : null,
+        "accountUserNameAttributes" : [
+            "uid"
+        ],
+        "attributesToSynchronize" : [ ],
+        "baseContexts" : [
+            "ou=preprod,ou=identities"
+        ],
+        "baseContextsToSynchronize" : [
+            "ou=preprod,ou=identities"
+        ],
+        "blockSize" : 100,
+        "changeLogBlockSize" : 100,
+        "changeNumberAttribute" : "changeNumber",
+        "credentials" : {
+            "$crypto" : {
+                "type" : "x-simple-encryption",
+                "value" : {
+                    "cipher" : "AES/CBC/PKCS5Padding",
+                    "stableId" : "openidm-sym-default",
+                    "salt" : "hqcgCdjdQ2mGdQSZtmB42Q==",
+                    "data" : "Y+v3UMn7Ae29I1mIXv2Xxw==",
+                    "keySize" : 16,
+                    "purpose" : "idm.config.encryption",
+                    "iv" : "nd/Hq5SM/MxtJepATUjisw==",
+                    "mac" : "X2pQuE/EQGrK36zoDnCMvA=="
+                }
+            }
+        },
+        "failover" : [ ],
+        "filterWithOrInsteadOfAnd" : false,
+        "groupMemberAttribute" : "uniqueMember",
+        "groupSearchFilter" : null,
+        "groupSynchronizationFilter" : null,
+        "host" : "idstest.example.com",
+        "maintainLdapGroupMembership" : false,
+        "maintainPosixGroupMembership" : false,
+        "modifiersNamesToFilterOut" : [ ],
+        "objectClassesToSynchronize" : [
+            "inetOrgPerson",
+            "iplanet-am-user-service"
+        ],
+        "passwordAttribute" : "userPassword",
+        "passwordHashAlgorithm" : null,
+        "port" : "636",
+        "principal" : "uid=am-identity-bind-account,ou=admins,ou=identities",
+        "readSchema" : false,
+        "removeLogEntryObjectClassFromFilter" : true,
+        "respectResourcePasswordPolicyChangeAfterReset" : false,
+        "ssl" : true,
+        "uidAttribute" : "entryUUID",
+        "useBlocks" : true,
+        "usePagedResultControl" : true,
+        "vlvSortAttribute" : "uid"
+    },
+    "connectorRef" : {
+        "bundleName" : "org.forgerock.openicf.connectors.ldap-connector",
+        "bundleVersion" : "[1.4.0.0,1.6.0.0)",
+        "connectorName" : "org.identityconnectors.ldap.LdapConnector"
+    },
+    "enabled" : true,
+    "excludeUnmodified" : true,
+    "objectTypes" : {
+        "account" : {
+            "$schema" : "http://json-schema.org/draft-03/schema",
+            "type" : "object",
+            "id" : "__ACCOUNT__",
+            "nativeType" : "__ACCOUNT__",
+            "properties" : {
+                "dn" : {
+                    "type" : "string",
+                    "nativeName" : "__NAME__",
+                    "nativeType" : "string",
+                    "required" : true
+                },
+                "objectClass" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "string",
+                        "nativeType" : "string"
+                    },
+                    "nativeType" : "string",
+                    "nativeName" : "objectClass",
+                    "required" : false
+                },
+                "cn" : {
+                    "type" : "string",
+                    "nativeName" : "cn",
+                    "nativeType" : "string",
+                    "required" : true
+                },
+                "sn" : {
+                    "type" : "string",
+                    "nativeName" : "sn",
+                    "nativeType" : "string",
+                    "required" : true
+                },
+                "uid" : {
+                    "type" : "array",
+                    "nativeName" : "uid",
+                    "nativeType" : "string",
+                    "items" : {
+                        "type" : "string",
+                        "nativeType" : "string"
+                    }
+                },
+                "userPassword" : {
+                    "type" : "string",
+                    "nativeName" : "__PASSWORD__",
+                    "nativeType" : "JAVA_TYPE_GUARDEDSTRING",
+                    "flags" : [
+                        "NOT_READABLE",
+                        "NOT_RETURNED_BY_DEFAULT"
+                    ],
+                    "runAsUser" : true
+                },
+                "ldapGroups" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "string",
+                        "nativeType" : "string"
+                    },
+                    "nativeName" : "ldapGroups",
+                    "nativeType" : "string"
+                },
+                "givenName" : {
+                    "type" : "string",
+                    "nativeName" : "givenName",
+                    "nativeType" : "string"
+                },
+                "mail" : {
+                    "type" : "string",
+                    "nativeName" : "mail",
+                    "nativeType" : "string"
+                },
+                "employeeType" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "string",
+                        "nativeType" : "string"
+                    },
+                    "nativeName" : "employeeType",
+                    "nativeType" : "string"
+                },
+                "description" : {
+                    "type" : "string",
+                    "nativeName" : "description",
+                    "nativeType" : "string"
+                },
+                "telephoneNumber" : {
+                    "type" : "string",
+                    "nativeName" : "telephoneNumber",
+                    "nativeType" : "string"
+                },
+                "disabled" : {
+                    "type" : "string",
+                    "nativeName" : "ds-pwp-account-disabled",
+                    "nativeType" : "string"
+                },
+                "kbaInfo" : {
+                    "type" : "array",
+                    "nativeType" : "string",
+                    "nativeName" : "kbaInfo",
+                    "required" : false
+                },
+                "aliasList" : {
+                    "type" : "array",
+                    "nativeType" : "string",
+                    "nativeName" : "iplanet-am-user-alias-list",
+                    "required" : false
+                },
+                "firstnameAR" : {
+                    "type" : "string",
+                    "nativeName" : "firstnameAR",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "fullnameAR" : {
+                    "type" : "string",
+                    "nativeName" : "fullnameAR",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "gender" : {
+                    "type" : "string",
+                    "nativeName" : "gender",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "idn" : {
+                    "type" : "string",
+                    "nativeName" : "idn",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "lastnameArabic" : {
+                    "type" : "string",
+                    "nativeName" : "lastnameArabic",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "nationalityAR" : {
+                    "type" : "string",
+                    "nativeName" : "nationalityAR",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "nationalityEN" : {
+                    "type" : "string",
+                    "nativeName" : "nationalityEN",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "userTypeUAE" : {
+                    "type" : "string",
+                    "nativeName" : "userTypeUAE",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "uuid" : {
+                    "type" : "string",
+                    "nativeName" : "uuid",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "emiratesID" : {
+                    "type" : "string",
+                    "nativeName" : "emiratesID",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "lastnameAR" : {
+                    "type" : "string",
+                    "nativeName" : "lastnameAR",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "businessCategory" : {
+                    "type" : "string",
+                    "nativeName" : "businessCategory",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "roomNumber" : {
+                    "type" : "string",
+                    "nativeName" : "roomNumber",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "initials" : {
+                    "type" : "string",
+                    "nativeName" : "initials",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "carLicense" : {
+                    "type" : "string",
+                    "nativeName" : "carLicense",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "departmentNumber" : {
+                    "type" : "string",
+                    "nativeName" : "departmentNumber",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "postalCode" : {
+                    "type" : "string",
+                    "nativeName" : "postalCode",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxOtpInvalidCount" : {
+                    "type" : "string",
+                    "nativeName" : "adxOtpInvalidCount",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxOtpIterationCount" : {
+                    "type" : "string",
+                    "nativeName" : "adxOtpIterationCount",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxOtpLock" : {
+                    "type" : "string",
+                    "nativeName" : "adxOtpLock",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxResendOtpInvalidCount" : {
+                    "type" : "string",
+                    "nativeName" : "adxResendOtpInvalidCount",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxResendOtpIterationCount" : {
+                    "type" : "string",
+                    "nativeName" : "adxResendOtpIterationCount",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxOtpLockExpiryTime" : {
+                    "type" : "string",
+                    "nativeName" : "adxOtpLockExpiryTime",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxIsAltLogin" : {
+                    "type" : "string",
+                    "nativeName" : "adxIsAltLogin",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxIsEmailVerified" : {
+                    "type" : "string",
+                    "nativeName" : "adxIsEmailVerified",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "adxUserType" : {
+                    "type" : "string",
+                    "nativeName" : "adxUserType",
+                    "nativeType" : "string",
+                    "required" : false
+                },
+                "inetUserStatus" : {
+                    "type" : "string",
+                    "nativeName" : "inetUserStatus",
+                    "nativeType" : "string",
+                    "required" : false
+                }
+            }
+        },
+        "group" : {
+            "$schema" : "http://json-schema.org/draft-03/schema",
+            "id" : "__GROUP__",
+            "nativeType" : "__GROUP__",
+            "properties" : {
+                "businessCategory" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "businessCategory",
+                    "nativeType" : "string",
+                    "type" : "array"
+                },
+                "cn" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "cn",
+                    "nativeType" : "string",
+                    "required" : true,
+                    "type" : "array"
+                },
+                "description" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "description",
+                    "nativeType" : "string",
+                    "type" : "array"
+                },
+                "dn" : {
+                    "nativeName" : "__NAME__",
+                    "nativeType" : "string",
+                    "required" : true,
+                    "type" : "string"
+                },
+                "o" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "o",
+                    "nativeType" : "string",
+                    "type" : "array"
+                },
+                "ou" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "ou",
+                    "nativeType" : "string",
+                    "type" : "array"
+                },
+                "owner" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "owner",
+                    "nativeType" : "string",
+                    "type" : "array"
+                },
+                "seeAlso" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "seeAlso",
+                    "nativeType" : "string",
+                    "type" : "array"
+                },
+                "uniqueMember" : {
+                    "items" : {
+                        "nativeType" : "string",
+                        "type" : "string"
+                    },
+                    "nativeName" : "uniqueMember",
+                    "nativeType" : "string",
+                    "type" : "array"
+                }
+            },
+            "type" : "object"
+        }
+    },
+    "operationOptions" : {
+        "CREATE" : {
+            "denied" : false,
+            "onDeny" : "DO_NOTHING"
+        },
+        "DELETE" : {
+            "denied" : false,
+            "onDeny" : "DO_NOTHING"
+        },
+        "UPDATE" : {
+            "denied" : false,
+            "onDeny" : "DO_NOTHING"
+        }
+    },
+    "operationTimeout" : {
+        "AUTHENTICATE" : -1,
+        "CREATE" : -1,
+        "DELETE" : -1,
+        "GET" : -1,
+        "SCHEMA" : -1,
+        "SCRIPT_ON_CONNECTOR" : -1,
+        "SCRIPT_ON_RESOURCE" : -1,
+        "SEARCH" : -1,
+        "SYNC" : -1,
+        "TEST" : -1,
+        "UPDATE" : -1,
+        "VALIDATE" : -1
+    },
+    "poolConfigOption" : {
+        "maxIdle" : 10,
+        "maxObjects" : 10,
+        "maxWait" : 150000,
+        "minEvictableIdleTimeMillis" : 120000,
+        "minIdle" : 1
+    },
+    "resultsHandlerConfig" : {
+        "enableAttributesToGetSearchResultsHandler" : true,
+        "enableCaseInsensitiveFilter" : false,
+        "enableFilteredResultsHandler" : false,
+        "enableNormalizingResultsHandler" : true
+    },
+    "syncFailureHandler" : {
+        "maxRetries" : 5,
+        "postRetryAction" : "logged-ignore"
+    }
+}

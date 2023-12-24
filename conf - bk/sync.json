@@ -1,0 +1,266 @@
+{
+    "mappings" : [
+        {
+            "name" : "managedUser_systemLdapAccounts",
+            "source" : "managed/user",
+            "target" : "system/ldap/account",
+            "enableSync" : true,
+            "onCreate" : {
+                "type" : "text/javascript",
+                "source" : "target.dn = 'uid=' + source.userName + ',ou=people,ou=identities';"
+            },
+            "properties" : [
+                {
+                    "source" : "givenName",
+                    "target" : "givenName"
+                },
+                {
+                    "source" : "sn",
+                    "target" : "sn"
+                },
+                {
+                    "source" : "",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "source" : "source.displayName || (source.givenName + ' ' + source.sn);"
+                    },
+                    "target" : "cn"
+                },
+                {
+                    "source" : "",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "source" : "[source._id, source.userName]"
+                    },
+                    "target" : "uid"
+                },
+                {
+                    "target" : "dn",
+                    "source" : "userName",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "source" : "\"uid=\" + source + \",ou=people,ou=identities\""
+                    }
+                },
+                {
+                    "source" : "description",
+                    "target" : "description",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "source" : "!!object.description"
+                    }
+                },
+                {
+                    "source" : "mail",
+                    "target" : "mail"
+                },
+                {
+                    "source" : "password",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "object.password != null"
+                    },
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "openidm.decrypt(source);"
+                    },
+                    "target" : "userPassword"
+                },
+                {
+                    "source" : "telephoneNumber",
+                    "target" : "telephoneNumber",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "source" : "!!object.telephoneNumber"
+                    }
+                },
+                {
+                    "source" : "aliasList",
+                    "target" : "aliasList"
+                },
+                {
+                    "target" : "objectClass",
+                    "default" : [
+                        "top",
+                        "inetuser",
+                        "person",
+                        "inetOrgPerson",
+                        "organizationalPerson",
+                        "iplanet-am-user-service",
+                        "kbaInfoContainer",
+                        "cutomUserObjectClass",
+                        "adxPerson",
+                        "sunAMAuthAccountLockout",
+                        "extensibleObject"
+                    ]
+                },
+                {
+                    "target" : "kbaInfo",
+                    "source" : "kbaInfo",
+                    "transform" : {
+                        "type" : "groovy",
+                        "globals" : { },
+                        "source" : "source ? (source.collect {(new groovy.json.JsonBuilder(it)).toString()}) : []"
+                    }
+                },
+                {
+                    "target" : "firstnameAR",
+                    "source" : "firstnameAR"
+                },
+                {
+                    "target" : "fullnameAR",
+                    "source" : "fullnameAR"
+                },
+                {
+                    "target" : "gender",
+                    "source" : "gender"
+                },
+                {
+                    "target" : "idn",
+                    "source" : "idn"
+                },
+                {
+                    "target" : "lastnameArabic",
+                    "source" : "lastnameArabic"
+                },
+                {
+                    "target" : "nationalityAR",
+                    "source" : "nationalityAR"
+                },
+                {
+                    "target" : "nationalityEN",
+                    "source" : "nationalityEN"
+                },
+                {
+                    "target" : "userTypeUAE",
+                    "source" : "userTypeUAE"
+                },
+                {
+                    "target" : "uuid",
+                    "source" : "uuid"
+                },
+                {
+                    "target" : "lastnameAR",
+                    "source" : "lastnameAR"
+                },
+                {
+                    "target" : "emiratesID",
+                    "source" : "emiratesID"
+                },
+                {
+                    "target" : "businessCategory",
+                    "source" : "businessCategory",
+                    "default" : "0"
+                },
+                {
+                    "target" : "carLicense",
+                    "source" : "carLicense",
+                    "default" : "false"
+                },
+                {
+                    "target" : "initials",
+                    "source" : "initials",
+                    "default" : "0"
+                },
+                {
+                    "target" : "roomNumber",
+                    "source" : "roomNumber",
+                    "default" : "0"
+                },
+                {
+                    "target" : "departmentNumber",
+                    "source" : "departmentNumber",
+                    "default" : "0"
+                },
+                {
+                    "target" : "postalCode",
+                    "source" : "postalCode",
+                    "default" : "0"
+                },
+                {
+                    "target" : "adxIsAltLogin",
+                    "source" : "adxIsAltLogin"
+                },
+                {
+                    "target" : "adxOtpInvalidCount",
+                    "source" : "adxOtpInvalidCount",
+                    "default" : "0"
+                },
+                {
+                    "target" : "adxOtpIterationCount",
+                    "source" : "adxOtpIterationCount",
+                    "default" : "0"
+                },
+                {
+                    "target" : "adxOtpLock",
+                    "source" : "adxOtpLock",
+                    "default" : "false"
+                },
+                {
+                    "target" : "adxOtpLockExpiryTime",
+                    "source" : "adxOtpLockExpiryTime",
+                    "default" : "0"
+                },
+                {
+                    "target" : "adxResendOtpInvalidCount",
+                    "source" : "adxResendOtpInvalidCount",
+                    "default" : "0"
+                },
+                {
+                    "target" : "adxResendOtpIterationCount",
+                    "source" : "adxResendOtpIterationCount",
+                    "default" : "0"
+                },
+                {
+                    "target" : "adxIsEmailVerified",
+                    "source" : "adxIsEmailVerified"
+                },
+                {
+                    "target" : "adxUserType",
+                    "source" : "adxUserType"
+                },
+                {
+                    "target" : "inetUserStatus",
+                    "source" : "accountStatus"
+                }
+            ],
+            "policies" : [
+                {
+                    "situation" : "CONFIRMED",
+                    "action" : "UPDATE"
+                },
+                {
+                    "situation" : "FOUND",
+                    "action" : "LINK"
+                },
+                {
+                    "situation" : "ABSENT",
+                    "action" : "CREATE"
+                },
+                {
+                    "situation" : "AMBIGUOUS",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "MISSING",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "SOURCE_MISSING",
+                    "action" : "DELETE"
+                },
+                {
+                    "situation" : "UNQUALIFIED",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "UNASSIGNED",
+                    "action" : "DELETE"
+                }
+            ],
+            "correlationQuery" : [ ]
+        }
+    ]
+}
